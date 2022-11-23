@@ -31,8 +31,8 @@ If push code to the main branch, it will trigger deploy on the prod env.
 
 ### Envs
 
-* dev - https://dev-oraculo.pesoreal.xyz/
-* prod - https://oraculo.remessaonline.com.br/
+* dev - https://dev-oraculo.netlify.com/
+* prod - https://oraculo.io/
 
 ### Env vars
 
