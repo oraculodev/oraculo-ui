@@ -1,0 +1,35 @@
+.ais-Hits-item, .ais-InfiniteHits-item {
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+
+.mr-1 {
+  margin-right: 5px;
+}
+
+.search-tags-title {
+  font-size: 12px;
+}
+
+body[data-layout-mode='dark'] .ais-Hits-item {
+  background-color: $gray-dark-200;
+  box-shadow: 0 0 0 1px rgb(0 0 0 / 5%), 0 1px 3px 0 rgb(0 0 0 / 15%);
+}
+
+body[data-layout-mode='dark'] .ais-SearchBox-form {
+  background-color: $gray-dark-200;
+}
+
+body[data-layout-mode='dark'] input {
+  color: $gray-dark-500;
+  background-color: $gray-dark-200;
+  border: 1px solid $gray-dark-300;
+}
+
+body[data-layout-mode='dark'] .ais-SearchBox-input:focus {
+  border-color: $gray-dark-500;
+}
+
+body[data-layout-mode='dark'] .ais-SearchBox-input::placeholder {
+  color: $gray-dark-500;
+}

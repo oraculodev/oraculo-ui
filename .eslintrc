@@ -1,0 +1,37 @@
+{
+  "parser": "vue-eslint-parser",
+  "plugins": ["import", "prettier", "vue"],
+  "extends": ["eslint:recommended", "plugin:vue/vue3-recommended", "@vue/prettier"],
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "commonjs": true
+  },
+  "ignorePatterns": [],
+  "rules": {
+    "no-undef": "off",
+    "import/prefer-default-export": 0,
+    "vue/multi-word-component-names": 0,
+    "import/extensions": [
+      0,
+      "never",
+      {
+        "extensions": [".js"]
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "off",
+      {
+        "devDependencies": []
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": "**/*.+(js)",
+      "rules": {}
+    }
+  ]
+}

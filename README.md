@@ -32,7 +32,7 @@ If push code to the main branch, it will trigger deploy on the prod env.
 ### Envs
 
 * dev - https://dev-oraculo.netlify.com/
-* prod - https://oraculo.io/
+* prod - https://oraculo-dev.io/
 
 ### Env vars
 
@@ -41,8 +41,7 @@ Copy `deploy/env.example` to `.env`
 ```
 VUE_APP_ORACULO_API_URL=
 VUE_APP_ORACULO_ADMIN_URL=
-VUE_APP_JENKINS_URL=
-VUE_APP_SEC_SCANNER_URL=
+VUE_APP_CICD_URL=
 VUE_APP_ALGOLIA_APP_ID=
 VUE_APP_ALGOLIA_API_KEY=
 VUE_APP_GTM=

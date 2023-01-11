@@ -1,0 +1,7 @@
+.git
+.next
+.eslintrc
+node_modules
+coverage
+dist
+build
