@@ -1,5 +1,5 @@
 # Oráculo Site
-[Demo](https://oraculodev.netlify.app/){:target="_blank"}
+[Demo](https://oraculodev.netlify.app/)
 
 ## Project setup
 
