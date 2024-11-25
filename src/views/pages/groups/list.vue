@@ -76,7 +76,7 @@ export default {
       return str.replace(/(<([^>]+)>)/gi, '')
     },
     dateTime(value) {
-      moment.locale('pt')
+      moment.locale('en')
       return moment(value).fromNow()
     },
     getNewUrl() {
@@ -96,24 +96,14 @@ export default {
               <div class="col-lg-2">
                 <div class="gridjs-head">
                   <div class="gridjs-search">
-                    <input
-                      v-model="searchTerm"
-                      type="search"
-                      placeholder="Search..."
-                      aria-label="Search..."
-                      class="gridjs-input gridjs-search-input"
-                    />
+                    <input v-model="searchTerm" type="search" placeholder="Search..." aria-label="Search..."
+                      class="gridjs-input gridjs-search-input" />
                   </div>
                 </div>
               </div>
               <div class="col-lg-10 text-end">
-                <a
-                  :href="getNewUrl()"
-                  class="btn btn-primary btn-rounded"
-                  target="_blank"
-                  alt="add new"
-                  title="add new"
-                >
+                <a :href="getNewUrl()" class="btn btn-primary btn-rounded" target="_blank" alt="add new"
+                  title="add new">
                   Add new
                 </a>
               </div>
@@ -140,14 +130,9 @@ export default {
                 <span v-if="totalItems" class="text-muted"> Page {{ currentPage }} of {{ totalPages }} </span>
               </div>
               <div class="col-sm pt-3">
-                <b-pagination
-                  v-if="totalItems"
-                  v-model="currentPage"
-                  class="justify-content-center justify-content-sm-end m-0"
-                  pills
-                  :total-rows="totalItems"
-                  :per-page="perPage"
-                />
+                <b-pagination v-if="totalItems" v-model="currentPage"
+                  class="justify-content-center justify-content-sm-end m-0" pills :total-rows="totalItems"
+                  :per-page="perPage" />
               </div>
             </div>
           </div>

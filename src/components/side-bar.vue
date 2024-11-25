@@ -221,15 +221,15 @@ export default {
         <!-- Left Menu Start -->
         <ul id="side-menu" class="metismenu list-unstyled">
           <li>
-            <router-link class="side-nav-link-ref" to="/components">
-              <eva-icon class="icon nav-icon" name="settings-outline"></eva-icon>
-              <span class="menu-item" data-key="t-components">Components</span>
+            <router-link class="side-nav-link-ref" to="/dash">
+              <eva-icon class="icon nav-icon" name="bar-chart-2-outline"></eva-icon>
+              <span class="menu-item" data-key="t-dash">Dashboard</span>
             </router-link>
           </li>
           <li>
-            <router-link class="side-nav-link-ref" to="/api-catalog">
-              <eva-icon class="icon nav-icon" name="globe-outline"></eva-icon>
-              <span class="menu-item" data-key="t-link">API Catalog</span>
+            <router-link class="side-nav-link-ref" to="/components">
+              <eva-icon class="icon nav-icon" name="settings-outline"></eva-icon>
+              <span class="menu-item" data-key="t-components">Components</span>
             </router-link>
           </li>
           <li>
@@ -239,21 +239,9 @@ export default {
             </router-link>
           </li>
           <li>
-            <router-link class="side-nav-link-ref" to="/workflows">
-              <eva-icon class="icon nav-icon" name="menu-arrow-outline"></eva-icon>
-              <span class="menu-item" data-key="t-workflows">Workflows</span>
-            </router-link>
-          </li>
-          <li>
             <router-link class="side-nav-link-ref" to="/systems">
               <eva-icon class="icon nav-icon" name="grid-outline"></eva-icon>
               <span class="menu-item" data-key="t-systems">Systems</span>
-            </router-link>
-          </li>
-          <li>
-            <router-link class="side-nav-link-ref" to="/glossary">
-              <eva-icon class="icon nav-icon" name="book-open-outline"></eva-icon>
-              <span class="menu-item" data-key="t-link">Glossary</span>
             </router-link>
           </li>
           <li>

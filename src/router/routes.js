@@ -2,7 +2,12 @@ export default [
   {
     path: '/',
     name: 'home',
-    component: () => import('../views/pages/search/search.vue'),
+    component: () => import('../views/pages/dash/dash.vue'),
+  },
+  {
+    path: '/dash',
+    name: 'dash',
+    component: () => import('../views/pages/dash/dash.vue'),
   },
   {
     path: '/components',
@@ -37,22 +42,6 @@ export default [
     ],
   },
   {
-    path: '/workflows',
-    component: () => import('../views/pages/workflows/index.vue'),
-    children: [
-      {
-        name: 'workflows-list',
-        path: '',
-        component: () => import('../views/pages/workflows/list.vue'),
-      },
-      {
-        name: 'workflows-show',
-        path: ':workflowId',
-        component: () => import('../views/pages/workflows/show.vue'),
-      },
-    ],
-  },
-  {
     path: '/systems',
     component: () => import('../views/pages/systems/index.vue'),
     children: [
@@ -67,16 +56,6 @@ export default [
         component: () => import('../views/pages/systems/show.vue'),
       },
     ],
-  },
-  {
-    path: '/api-catalog',
-    name: 'api-catalog',
-    component: () => import('../views/pages/api-catalog/list.vue'),
-  },
-  {
-    path: '/glossary',
-    name: 'glossary',
-    component: () => import('../views/pages/glossary/list.vue'),
   },
   {
     path: '/links',

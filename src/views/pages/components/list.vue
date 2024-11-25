@@ -20,13 +20,21 @@ export default {
     fields: [
       { key: 'id', label: 'Id', sortable: true, tdClass: 'align-middle' },
       { key: 'name', label: 'Name', sortable: true, tdClass: 'align-middle' },
-      { key: 'repo_url', label: 'Repository', sortable: true, tdClass: 'align-middle' },
+      { key: 'macroarea', label: 'Macroarea', sortable: true, tdClass: 'align-middle' },
       { key: 'group_owner', label: 'Owner', sortable: true, tdClass: 'align-middle' },
-      { key: 'type', label: 'Tipo', sortable: true, tdClass: 'align-middle' },
+      { key: 'type', label: 'Type', sortable: true, tdClass: 'align-middle' },
       { key: 'lifecycle', label: 'Lifecycle', sortable: true, tdClass: 'align-middle' },
       { key: 'tags', label: 'Tags', sortable: true, tdClass: 'align-middle' },
-      { key: 'repo_updated_at', label: 'Last push', sortable: true, tdClass: 'align-middle' },
-      { key: 'repo_created_at', label: 'Created at', sortable: true, tdClass: 'align-middle' },
+      { key: 'context_level', label: 'Context', sortable: true, tdClass: 'align-middle' },
+      { key: 'critical', label: 'Critical', sortable: true, thClass: 'text-center', tdClass: 'text-center' },
+      {
+        key: 'component_app_climate_scores',
+        label: 'Climate Score',
+        sortable: true,
+        thClass: 'text-center',
+        tdClass: 'text-center',
+      },
+      { key: 'repo_pushed_at', label: 'Pushed at', sortable: true, tdClass: 'align-middle' },
     ],
   }),
   computed: {
@@ -72,7 +80,7 @@ export default {
         })
     },
     dateTime(value) {
-      moment.locale('pt')
+      moment.locale('en')
       return moment(value).fromNow()
     },
   },
@@ -80,7 +88,7 @@ export default {
 </script>
 
 <template>
-  <Layout :pagetitle="'Components'">
+  <Layout :pagetitle="'Componentes'">
     <div class="row">
       <div class="col-lg-12">
         <div class="card">
@@ -89,13 +97,8 @@ export default {
               <div class="col-lg-2">
                 <div class="gridjs-head">
                   <div class="gridjs-search">
-                    <input
-                      v-model="searchTerm"
-                      type="search"
-                      placeholder="Search..."
-                      aria-label="Search..."
-                      class="gridjs-input gridjs-search-input"
-                    />
+                    <input v-model="searchTerm" type="search" placeholder="Search..." aria-label="Search..."
+                      class="gridjs-input gridjs-search-input" />
                   </div>
                 </div>
               </div>
@@ -106,16 +109,35 @@ export default {
                 <template #cell(name)="data">
                   <router-link :to="`/components/${data.item.id}`">{{ data.value }}</router-link>
                 </template>
+                <template #cell(macroarea)="data">
+                  <span v-if="data.value">{{ data.value.name }}</span>
+                </template>
                 <template #cell(group_owner)="data">
                   <span v-if="data.item.group_owner">{{ data.item.group_owner.name }}</span>
                 </template>
                 <template #cell(tags)="data">
-                  <span v-for="tag in data.value" :key="tag" class="badge badge-soft-primary">{{ tag }}</span>
+                  <span v-for="tag in data.value" :key="tag" class="badge badge-soft-info">{{ tag }}</span>
                 </template>
-                <template #cell(repo_updated_at)="data">
-                  {{ dateTime(data.value) }}
+                <template #cell(critical)="data">
+                  <div class="text-center">
+                    <i v-if="data.value" class="bx bx-check-circle font-size-16 text-success"></i>
+                    <i v-else class="bx bx-x-circle font-size-16 text-danger"></i>
+                  </div>
                 </template>
-                <template #cell(repo_created_at)="data">
+                <template #cell(component_app_climate_scores)="data">
+                  <div v-for="score in data.value" :key="score" class="text-center">
+                    <div v-if="score.app_climate_score.name == 'Total'">
+                      <span v-if="score.score > 70" class="font-size-14 badge badge-soft-success">{{ score.score
+                        }}%</span>
+                      <span v-else-if="score.score >= 40 && score.score <= 70"
+                        class="font-size-14 badge badge-soft-warning">{{ score.score }}%</span>
+                      <span v-else-if="score.score < 40 && score.score > 0"
+                        class="font-size-14 badge badge-soft-danger">{{ score.score }}%</span>
+                      <span v-else class="font-size-14 badge badge-soft-light text-muted">{{ score.score }}%</span>
+                    </div>
+                  </div>
+                </template>
+                <template #cell(repo_pushed_at)="data">
                   {{ dateTime(data.value) }}
                 </template>
               </b-table>
@@ -126,14 +148,9 @@ export default {
                 <span v-if="totalItems" class="text-muted"> Page {{ currentPage }} of {{ totalPages }} </span>
               </div>
               <div class="col-sm pt-3">
-                <b-pagination
-                  v-if="totalItems"
-                  v-model="currentPage"
-                  class="justify-content-center justify-content-sm-end m-0"
-                  pills
-                  :total-rows="totalItems"
-                  :per-page="perPage"
-                />
+                <b-pagination v-if="totalItems" v-model="currentPage"
+                  class="justify-content-center justify-content-sm-end m-0" pills :total-rows="totalItems"
+                  :per-page="perPage" />
               </div>
             </div>
           </div>

@@ -3,7 +3,9 @@ import { oraculoApi } from '@/api'
 export const actions = {
   getAll(context, payload) {
     const { limit, offset, search, filters } = payload
-    return oraculoApi.get(`/components?limit=${limit}&offset=${offset}&search=${search}&ordering=name&${filters}`)
+    return oraculoApi.get(
+      `/components?limit=${limit}&offset=${offset}&search=${search}&ordering=-critical,name&${filters}`,
+    )
   },
   getById(context, payload) {
     const { id } = payload
