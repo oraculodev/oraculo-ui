@@ -53,11 +53,9 @@ export default {
         <div class="card">
           <div class="card-header">
             <div class="row">
-              <div class="col-sm-5">
-                <h3 class="mb-0">About</h3>
-              </div>
-              <div class="col-sm-7 text-end">
-                <ul class="list-inline m-0">
+              <div class="col-lg-12">
+                <h3 class="mb-0 float-start">About</h3>
+                <ul class="list-inline m-0 text-end float-end">
                   <li v-show="data.design_url" class="list-inline-item">
                     <a :href="data.design_url" target="_blank" alt="figma do time" title="figma do time">
                       <i class="bx bxs-palette font-size-26"></i>

@@ -163,12 +163,12 @@ export default {
     <ul class="nav nav-tabs nav-tabs-custom" role="tablist">
       <li class="nav-item">
         <a class="nav-link active" data-bs-toggle="tab" href="#overview" role="tab">
-          <span class="d-none d-sm-block">OVERVIEW</span>
+          <span>OVERVIEW</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="tab" href="#assessment" role="tab">
-          <span class="d-none d-sm-block">APP CLIMATE</span>
+          <span>APP CLIMATE</span>
         </a>
       </li>
     </ul>
@@ -183,11 +183,9 @@ export default {
             <div class="card">
               <div class="card-header bg-transparent border-bottom">
                 <div class="row">
-                  <div class="col-sm-5">
-                    <h3 class="mb-0">About</h3>
-                  </div>
-                  <div class="col-sm-7 text-end">
-                    <ul class="list-inline m-0">
+                  <div class="col-lg-12">
+                    <h3 class="mb-0 float-start">About</h3>
+                    <ul class="list-inline m-0 text-end float-end">
                       <li v-show="data.api_doc_url" class="list-inline-item">
                         <a :href="data.api_doc_url" target="_blank" alt="api doc swagger" title="api doc swagger"><i
                             class="bx bxs-file-json font-size-26"></i></a>

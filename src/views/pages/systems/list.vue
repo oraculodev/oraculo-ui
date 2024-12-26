@@ -94,19 +94,19 @@ export default {
         <div class="card">
           <div class="card-body">
             <div class="row">
-              <div class="col-lg-2">
+              <div class="col-lg-12">
                 <div class="gridjs-head">
-                  <div class="gridjs-search">
+                  <div class="gridjs-search float-start">
                     <input v-model="searchTerm" type="search" placeholder="Search..." aria-label="Search..."
                       class="gridjs-input gridjs-search-input" />
                   </div>
+                  <div class="text-end float-end">
+                    <a :href="getNewUrl()" class="btn btn-primary btn-rounded" target="_blank" alt="add new"
+                      title="add new">
+                      Add new
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-10 text-end">
-                <a :href="getNewUrl()" class="btn btn-primary btn-rounded" target="_blank" alt="add new"
-                  title="add new">
-                  Add new
-                </a>
               </div>
             </div>
 

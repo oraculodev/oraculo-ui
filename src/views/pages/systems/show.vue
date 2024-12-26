@@ -54,10 +54,8 @@ export default {
           <div class="card-header bg-transparent border-bottom">
             <div class="row">
               <div class="col-sm-5">
-                <h3 class="mb-0">About</h3>
-              </div>
-              <div class="col-sm-7 text-end">
-                <ul class="list-inline m-0">
+                <h3 class="mb-0 float-start">About</h3>
+                <ul class="list-inline m-0 text-end float-end">
                   <li class="list-inline-item mr-4">
                     <a :href="getEditUrl()" target="_blank" alt="edit meta data" title="edit meta data"><i
                         class="bx bx-edit-alt font-size-26"></i></a>
