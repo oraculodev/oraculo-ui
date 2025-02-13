@@ -14,7 +14,11 @@ export default {
     <div class="card overflow-hidden">
       <div class="card-body">
         <h2>Oráculo</h2>
-        <h5 class="text-muted">A Simple Alternative to Backstage.io</h5>
+        <h5 class="text-muted">A Simple Alternative to Backstage.io
+          <a href="https://github.com/oraculodev" target="_blank">
+            <span class="badge bg-soft-info text-info font-size-11">github</span>
+          </a>
+        </h5>
         <br />
         <p>In the world of tech companies, maintaining clear visibility over teams, services, and repositories is a
           significant challenge. Oráculo emerges as a simplified and efficient solution to help medium and large
@@ -73,6 +77,11 @@ export default {
           <a href="mailto:tisciencia@gmail.com" target="_blank" title="feedback">
             <span class="fw-semibold">contact us</span>
           </a>.
+        </p>
+        <p>
+          <a href="https://github.com/oraculodev" target="_blank">
+            Visit our <span class="fw-semibold">Github</span> page.
+          </a>
         </p>
       </div>
       <div class="p-3 px-4 sidebar-footer">
