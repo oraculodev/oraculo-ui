@@ -1,5 +1,12 @@
 # Oráculo Site
-[Demo](https://oraculodev.netlify.app/)
+[Demo](https://oraculodev.com)
+
+
+## About
+[About](https://oraculodev.com/about)
+
+## License
+This project is licensed under the MIT [LICENSE](License) – see the LICENSE file for details.
 
 ## Project setup
 
