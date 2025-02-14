@@ -20,10 +20,10 @@ export default {
           </a>
         </h5>
         <br />
-        <p>In the world of tech companies, maintaining clear visibility over teams, services, and repositories is a
-          significant challenge. Oráculo emerges as a simplified and efficient solution to help medium and large
-          enterprises organize their technical structure without the complexity and high maintenance cost of
-          Backstage.io, a tool originally developed by Spotify.
+        <p>Maintaining clear visibility over teams, services, and repositories is a significant challenge. Oráculo
+          emerges as a simplified and efficient solution to help medium and large enterprises organize their technical
+          structure without the complexity and high maintenance cost of Backstage.io, a tool originally developed by
+          Spotify.
         </p>
         <h5>What is Oráculo?</h5>
         <p>
