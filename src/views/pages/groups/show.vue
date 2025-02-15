@@ -62,12 +62,14 @@ export default {
                     </a>
                   </li>
                   <li v-show="data.board_url" class="list-inline-item">
-                    <a :href="data.board_url" target="_blank" alt="board do time" title="board do time"><i
-                        class="bx bxs-dashboard font-size-26"></i></a>
+                    <a :href="data.board_url" target="_blank" alt="board do time" title="board do time"
+                      ><i class="bx bxs-dashboard font-size-26"></i
+                    ></a>
                   </li>
                   <li class="list-inline-item mr-4">
-                    <a :href="getEditUrl()" target="_blank" alt="edit meta data" title="edit meta data"><i
-                        class="bx bx-edit-alt font-size-26"></i></a>
+                    <a :href="getEditUrl()" target="_blank" alt="edit meta data" title="edit meta data"
+                      ><i class="bx bx-edit-alt font-size-26"></i
+                    ></a>
                   </li>
                 </ul>
               </div>
@@ -110,20 +112,33 @@ export default {
             <div v-if="data.group_links && data.group_links.length > 0" id="accordionLinks" class="accordion">
               <div v-for="group_link in data.group_links" :key="group_link.id" class="accordion-item">
                 <h2 :id="group_link.id" class="accordion-header">
-                  <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse"
-                    :data-bs-target="'#accordion' + group_link.id" aria-expanded="false"
-                    :aria-controls="'accordion' + group_link.id">
+                  <button
+                    class="accordion-button fw-medium collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    :data-bs-target="'#accordion' + group_link.id"
+                    aria-expanded="false"
+                    :aria-controls="'accordion' + group_link.id"
+                  >
                     {{ group_link.name }}
                   </button>
                 </h2>
-                <div :id="'accordion' + group_link.id" class="accordion-collapse collapse" aria-labelledby="headingOne"
-                  data-bs-parent="#accordionLinks">
+                <div
+                  :id="'accordion' + group_link.id"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="headingOne"
+                  data-bs-parent="#accordionLinks"
+                >
                   <div class="accordion-body">
                     <div class="text-muted">
                       <ul v-if="group_link.links && group_link.links.length > 0" class="m-0">
                         <li v-for="index in group_link.links.length" :key="index">
-                          <a :href="group_link.links[index - 1].url" target="_blank"
-                            :alt="group_link.links[index - 1].text" :title="group_link.links[index - 1].text">
+                          <a
+                            :href="group_link.links[index - 1].url"
+                            target="_blank"
+                            :alt="group_link.links[index - 1].text"
+                            :title="group_link.links[index - 1].text"
+                          >
                             {{ group_link.links[index - 1].text }}
                           </a>
                         </li>
@@ -148,8 +163,10 @@ export default {
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              <table v-if="data.related_groups && data.related_groups.length > 0"
-                class="table align-middle table-borderless mb-0">
+              <table
+                v-if="data.related_groups && data.related_groups.length > 0"
+                class="table align-middle table-borderless mb-0"
+              >
                 <thead class="table-light">
                   <tr>
                     <th class="align-middle">Nome</th>
@@ -197,8 +214,9 @@ export default {
         <div class="card">
           <div class="card-header">
             <h3 class="mb-0">Other respositories</h3>
-            <span class="text-muted">Repositories where the team eventually interacts or contributes through
-              innersource</span>
+            <span class="text-muted"
+              >Repositories where the team eventually interacts or contributes through innersource</span
+            >
           </div>
           <div class="card-body">
             <div class="table-responsive">

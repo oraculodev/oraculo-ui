@@ -97,12 +97,22 @@ export default {
               <div class="col-lg-12">
                 <div class="gridjs-head">
                   <div class="gridjs-search float-start">
-                    <input v-model="searchTerm" type="search" placeholder="Search..." aria-label="Search..."
-                      class="gridjs-input gridjs-search-input" />
+                    <input
+                      v-model="searchTerm"
+                      type="search"
+                      placeholder="Search..."
+                      aria-label="Search..."
+                      class="gridjs-input gridjs-search-input"
+                    />
                   </div>
                   <div class="text-end float-end">
-                    <a :href="getNewUrl()" class="btn btn-primary btn-rounded" target="_blank" alt="add new"
-                      title="add new">
+                    <a
+                      :href="getNewUrl()"
+                      class="btn btn-primary btn-rounded"
+                      target="_blank"
+                      alt="add new"
+                      title="add new"
+                    >
                       Add new
                     </a>
                   </div>
@@ -139,9 +149,14 @@ export default {
                 <span v-if="totalItems" class="text-muted"> Page {{ currentPage }} of {{ totalPages }} </span>
               </div>
               <div class="col-sm pt-3">
-                <b-pagination v-if="totalItems" v-model="currentPage"
-                  class="justify-content-center justify-content-sm-end m-0" pills :total-rows="totalItems"
-                  :per-page="perPage" />
+                <b-pagination
+                  v-if="totalItems"
+                  v-model="currentPage"
+                  class="justify-content-center justify-content-sm-end m-0"
+                  pills
+                  :total-rows="totalItems"
+                  :per-page="perPage"
+                />
               </div>
             </div>
           </div>

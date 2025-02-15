@@ -58,16 +58,22 @@ export default {
         </a>
       </div>
       <div class="col-lg-6">
-        <a :href="getUrl() + 'component/?infos_up_to_date__exact=0&lifecycle__exact=production'" title="link.title"
-          target="_blank">
+        <a
+          :href="getUrl() + 'component/?infos_up_to_date__exact=0&lifecycle__exact=production'"
+          title="link.title"
+          target="_blank"
+        >
           <div class="card overflow-hidden">
             <div class="card-body d-flex align-items-center">
               <div class="flex-shrink-0 me-4">
                 <div class="avatar">
-                  <div :class="data.not_up_to_date_services_count == 0
-                    ? 'avatar-title rounded bg-soft-primary text-primary'
-                    : ' avatar-title rounded bg-soft-danger text-danger'
-                    ">
+                  <div
+                    :class="
+                      data.not_up_to_date_services_count == 0
+                        ? 'avatar-title rounded bg-soft-primary text-primary'
+                        : ' avatar-title rounded bg-soft-danger text-danger'
+                    "
+                  >
                     <eva-icon class="icon font-size-24" name="minus-circle-outline"></eva-icon>
                   </div>
                 </div>
@@ -94,8 +100,9 @@ export default {
                 <h4 class="card-title">Amount of services by team</h4>
               </div>
               <div class="col-sm-4 text-end">
-                <a :href="getUrl() + 'group'" title="Oráculo Admin - Groups" target="_blank" class="text-end">see
-                  details</a>
+                <a :href="getUrl() + 'group'" title="Oráculo Admin - Groups" target="_blank" class="text-end"
+                  >see details</a
+                >
               </div>
             </div>
           </div>
@@ -134,8 +141,9 @@ export default {
                 <h4 class="card-title">Amount of services by macroarea</h4>
               </div>
               <div class="col-sm-4 text-end">
-                <a :href="getUrl() + 'component'" title="Oráculo Admin - Componentes" target="_blank"
-                  class="text-end">see details</a>
+                <a :href="getUrl() + 'component'" title="Oráculo Admin - Componentes" target="_blank" class="text-end"
+                  >see details</a
+                >
               </div>
             </div>
           </div>
@@ -178,8 +186,9 @@ export default {
                 <h4 class="card-title">Amount of services by type</h4>
               </div>
               <div class="col-sm-4 text-end">
-                <a :href="getUrl() + 'component'" title="Oráculo Admin - Componentes" target="_blank"
-                  class="text-end">see details</a>
+                <a :href="getUrl() + 'component'" title="Oráculo Admin - Componentes" target="_blank" class="text-end"
+                  >see details</a
+                >
               </div>
             </div>
           </div>

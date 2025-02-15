@@ -14,13 +14,15 @@ export default {
     <div class="card overflow-hidden">
       <div class="card-body">
         <h2>Oráculo</h2>
-        <h5 class="text-muted">A Simple Alternative to Backstage.io
+        <h5 class="text-muted">
+          A Simple Alternative to Backstage.io
           <a href="https://github.com/oraculodev" target="_blank">
             <span class="badge bg-soft-info text-info font-size-11">github</span>
           </a>
         </h5>
         <br />
-        <p>Maintaining clear visibility over teams, services, and repositories is a significant challenge. Oráculo
+        <p>
+          Maintaining clear visibility over teams, services, and repositories is a significant challenge. Oráculo
           emerges as a simplified and efficient solution to help medium and large enterprises organize their technical
           structure without the complexity and high maintenance cost of Backstage.io, a tool originally developed by
           Spotify.
@@ -71,12 +73,18 @@ export default {
           specific business needs. The project follows the <strong>MIT license</strong>, which allows code reuse and
           modification with minimal restrictions, ensuring transparency and freedom of use.
         </p>
+        <h5>Credits</h5>
+        <p>
+          The development of Oráculo was made possible through the collaboration of some developers from Remessa Online,
+          who contributed ideas, improvements, and essential feedback for the project's evolution. We thank everyone who
+          helped make this tool a reality!
+        </p>
         <h5>Contact</h5>
         <p>
           If you have any questions or would like to suggest or report something, please
           <a href="mailto:tisciencia@gmail.com" target="_blank" title="feedback">
-            <span class="fw-semibold">contact us</span>
-          </a>.
+            <span class="fw-semibold">contact us</span></a
+          >.
         </p>
         <p>
           <a href="https://github.com/oraculodev" target="_blank">

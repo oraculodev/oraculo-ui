@@ -187,24 +187,34 @@ export default {
                     <h3 class="mb-0 float-start">About</h3>
                     <ul class="list-inline m-0 text-end float-end">
                       <li v-show="data.api_doc_url" class="list-inline-item">
-                        <a :href="data.api_doc_url" target="_blank" alt="api doc swagger" title="api doc swagger"><i
-                            class="bx bxs-file-json font-size-26"></i></a>
+                        <a :href="data.api_doc_url" target="_blank" alt="api doc swagger" title="api doc swagger"
+                          ><i class="bx bxs-file-json font-size-26"></i
+                        ></a>
                       </li>
                       <li v-show="data.public_api_doc_url" class="list-inline-item">
-                        <a :href="data.public_api_doc_url" target="_blank" alt="public api doc"
-                          title="public api doc"><i class="bx bx-globe font-size-26"></i></a>
+                        <a :href="data.public_api_doc_url" target="_blank" alt="public api doc" title="public api doc"
+                          ><i class="bx bx-globe font-size-26"></i
+                        ></a>
                       </li>
                       <li class="list-inline-item">
-                        <a :href="getCICDUrl()" target="_blank" alt="ci/cd" title="ci/cd"><i
-                            class="bx bx-git-pull-request font-size-26"></i></a>
+                        <a :href="getCICDUrl()" target="_blank" alt="ci/cd" title="ci/cd"
+                          ><i class="bx bx-git-pull-request font-size-26"></i
+                        ></a>
                       </li>
                       <li class="list-inline-item">
-                        <a :href="data.repo_url" target="_blank" alt="view source code" title="view source code"
-                          class=""><i class="bx bxl-github font-size-26"></i></a>
+                        <a
+                          :href="data.repo_url"
+                          target="_blank"
+                          alt="view source code"
+                          title="view source code"
+                          class=""
+                          ><i class="bx bxl-github font-size-26"></i
+                        ></a>
                       </li>
                       <li class="list-inline-item mr-4">
-                        <a :href="getEditUrl()" target="_blank" alt="edit meta data" title="edit meta data"><i
-                            class="bx bx-edit-alt font-size-26"></i></a>
+                        <a :href="getEditUrl()" target="_blank" alt="edit meta data" title="edit meta data"
+                          ><i class="bx bx-edit-alt font-size-26"></i
+                        ></a>
                       </li>
                     </ul>
                   </div>
@@ -274,20 +284,33 @@ export default {
                 <div v-if="data.group_links && data.group_links.length > 0" id="accordionLinks" class="accordion">
                   <div v-for="group_link in data.group_links" :key="group_link.id" class="accordion-item">
                     <h2 :id="group_link.id" class="accordion-header">
-                      <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse"
-                        :data-bs-target="'#accordion' + group_link.id" aria-expanded="false"
-                        :aria-controls="'accordion' + group_link.id">
+                      <button
+                        class="accordion-button fw-medium collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        :data-bs-target="'#accordion' + group_link.id"
+                        aria-expanded="false"
+                        :aria-controls="'accordion' + group_link.id"
+                      >
                         {{ group_link.name }}
                       </button>
                     </h2>
-                    <div :id="'accordion' + group_link.id" class="accordion-collapse collapse"
-                      aria-labelledby="headingOne" data-bs-parent="#accordionLinks">
+                    <div
+                      :id="'accordion' + group_link.id"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionLinks"
+                    >
                       <div class="accordion-body">
                         <div class="text-muted">
                           <ul v-if="group_link.links && group_link.links.length > 0" class="m-0">
                             <li v-for="index in group_link.links.length" :key="index">
-                              <a :href="group_link.links[index - 1].url" target="_blank"
-                                :alt="group_link.links[index - 1].text" :title="group_link.links[index - 1].text">
+                              <a
+                                :href="group_link.links[index - 1].url"
+                                target="_blank"
+                                :alt="group_link.links[index - 1].text"
+                                :title="group_link.links[index - 1].text"
+                              >
                                 {{ group_link.links[index - 1].text }}
                               </a>
                             </li>
@@ -328,8 +351,10 @@ export default {
               </div>
               <div class="card-body">
                 <div class="table-responsive">
-                  <table v-if="data.resources && data.resources.length > 0"
-                    class="table align-middle table-borderless mb-0">
+                  <table
+                    v-if="data.resources && data.resources.length > 0"
+                    class="table align-middle table-borderless mb-0"
+                  >
                     <thead class="table-light">
                       <tr>
                         <th class="align-middle">Name</th>
@@ -374,8 +399,13 @@ export default {
             <h2 class="text-center">
               {{ score.app_climate_score.name }}
             </h2>
-            <apexchart class="apex-charts" height="250" dir="ltr" :series="[score.score]"
-              :options="semiRadialbarChart.chartOptions">
+            <apexchart
+              class="apex-charts"
+              height="250"
+              dir="ltr"
+              :series="[score.score]"
+              :options="semiRadialbarChart.chartOptions"
+            >
             </apexchart>
           </div>
         </div>
@@ -391,8 +421,9 @@ export default {
                   <div class="col-sm-2 text-end">
                     <ul class="list-inline m-0">
                       <li class="list-inline-item mr-4">
-                        <a :href="getEditUrl()" target="_blank" alt="edit meta data" title="edit meta data"><i
-                            class="bx bx-edit-alt font-size-26"></i></a>
+                        <a :href="getEditUrl()" target="_blank" alt="edit meta data" title="edit meta data"
+                          ><i class="bx bx-edit-alt font-size-26"></i
+                        ></a>
                       </li>
                     </ul>
                   </div>

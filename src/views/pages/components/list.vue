@@ -97,8 +97,13 @@ export default {
               <div class="col-lg-2">
                 <div class="gridjs-head">
                   <div class="gridjs-search">
-                    <input v-model="searchTerm" type="search" placeholder="Search..." aria-label="Search..."
-                      class="gridjs-input gridjs-search-input" />
+                    <input
+                      v-model="searchTerm"
+                      type="search"
+                      placeholder="Search..."
+                      aria-label="Search..."
+                      class="gridjs-input gridjs-search-input"
+                    />
                   </div>
                 </div>
               </div>
@@ -127,12 +132,17 @@ export default {
                 <template #cell(component_app_climate_scores)="data">
                   <div v-for="score in data.value" :key="score" class="text-center">
                     <div v-if="score.app_climate_score.name == 'Total'">
-                      <span v-if="score.score > 70" class="font-size-14 badge badge-soft-success">{{ score.score
-                        }}%</span>
-                      <span v-else-if="score.score >= 40 && score.score <= 70"
-                        class="font-size-14 badge badge-soft-warning">{{ score.score }}%</span>
-                      <span v-else-if="score.score < 40 && score.score > 0"
-                        class="font-size-14 badge badge-soft-danger">{{ score.score }}%</span>
+                      <span v-if="score.score > 70" class="font-size-14 badge badge-soft-success"
+                        >{{ score.score }}%</span
+                      >
+                      <span
+                        v-else-if="score.score >= 40 && score.score <= 70"
+                        class="font-size-14 badge badge-soft-warning"
+                        >{{ score.score }}%</span
+                      >
+                      <span v-else-if="score.score < 40 && score.score > 0" class="font-size-14 badge badge-soft-danger"
+                        >{{ score.score }}%</span
+                      >
                       <span v-else class="font-size-14 badge badge-soft-light text-muted">{{ score.score }}%</span>
                     </div>
                   </div>
@@ -148,9 +158,14 @@ export default {
                 <span v-if="totalItems" class="text-muted"> Page {{ currentPage }} of {{ totalPages }} </span>
               </div>
               <div class="col-sm pt-3">
-                <b-pagination v-if="totalItems" v-model="currentPage"
-                  class="justify-content-center justify-content-sm-end m-0" pills :total-rows="totalItems"
-                  :per-page="perPage" />
+                <b-pagination
+                  v-if="totalItems"
+                  v-model="currentPage"
+                  class="justify-content-center justify-content-sm-end m-0"
+                  pills
+                  :total-rows="totalItems"
+                  :per-page="perPage"
+                />
               </div>
             </div>
           </div>
